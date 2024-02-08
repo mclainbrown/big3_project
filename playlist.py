@@ -6,7 +6,7 @@ from spotipy.oauth2 import SpotifyClientCredentials
 sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials())
    
 username = 'lainiebrown4'
-playlist_id = '3ihjmF1KRaR2uisG3Jufqs'
+playlist_id = '3A3Z9f1jlhQyl1HXisuieR'
 
 results = sp.user_playlist(username, playlist_id, 'tracks')
 
@@ -40,9 +40,9 @@ features_df['date_released'] = playlist_date_released
 features_df['company'] = 'YG'
 features_df = features_df[['id', 'title', 'artist', 'company','date_released',
                            'danceability', 'energy', 'key', 'loudness',
-                           'mode', 'acousticness', 'instrumentalness',
+                           'mode', 'speechiness', 'acousticness', 'instrumentalness',
                            'liveness', 'valence', 'tempo',
-                           'duration_ms', 'time_signature']]
+                           'duration_ms']]
 
-features_df.to_csv('2ne1.csv')
+features_df.to_csv('treasure.csv')
 
